@@ -1,0 +1,113 @@
+[debug] [2018-04-14T23:42:23.365Z] ----------------------------------------------------------------------
+[debug] [2018-04-14T23:42:23.388Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Olim\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-04-14T23:42:23.389Z] CLI Version:   3.18.4
+[debug] [2018-04-14T23:42:23.389Z] Platform:      win32
+[debug] [2018-04-14T23:42:23.389Z] Node Version:  v8.9.3
+[debug] [2018-04-14T23:42:23.393Z] Time:          Sun Apr 15 2018 00:42:23 GMT+0100 (Hora de Verão de GMT)
+[debug] [2018-04-14T23:42:23.393Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-14T23:42:23.476Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-14T23:42:23.476Z] > authorizing via signed-in user
+[debug] [2018-04-14T23:42:23.480Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/umartigos  
+  
+ Sun Apr 15 2018 00:42:23 GMT+0100 (Hora de Verão de GMT)
+[debug] [2018-04-14T23:42:25.023Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-14T23:42:25.024Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/umartigos/tokens  
+  
+ Sun Apr 15 2018 00:42:25 GMT+0100 (Hora de Verão de GMT)
+[debug] [2018-04-14T23:42:25.688Z] <<< HTTP RESPONSE 200
+[warn] !  functions: package.json indicates an outdated version of firebase-functions.
+ Please upgrade using npm install --save firebase-functions@latest in your functions directory.
+[warn] !  functions: Please note that there will be breaking changes when you upgrade.
+ Go to https://firebase.google.com/docs/functions/beta-v1-diff to learn more.
+[info] 
+[info] === Deploying to 'umartigos'...
+[info] 
+[info] i  deploying functions, hosting
+[debug] [2018-04-14T23:43:42.066Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-runtime": "^6.23.0",
+    "clone": "^2.1.1",
+    "debug": "^3.1.0",
+    "es6-promise": "^4.1.1",
+    "express": "^4.15.4",
+    "firebase-admin": "^5.0.1",
+    "firebase-functions": "^0.6.1",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.4",
+    "nuxt": "1.0.0-rc11",
+    "vue": "~2.4.2",
+    "vue-meta": "^1.2.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-04-14T23:43:42.068Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/umartigos?view=CONSUMER_VIEW  
+  
+ Sun Apr 15 2018 00:43:42 GMT+0100 (Hora de Verão de GMT)
+[debug] [2018-04-14T23:43:42.069Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/umartigos?view=CONSUMER_VIEW  
+  
+ Sun Apr 15 2018 00:43:42 GMT+0100 (Hora de Verão de GMT)
+[debug] [2018-04-14T23:43:43.461Z] <<< HTTP RESPONSE 200
+[warn] !  functions: missing necessary APIs. Enabling now...
+[debug] [2018-04-14T23:43:43.463Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/umartigos?updateMask=usageSettings  
+ { usageSettings: { consumerEnableStatus: 'ENABLED' } } 
+ Sun Apr 15 2018 00:43:43 GMT+0100 (Hora de Verão de GMT)
+[debug] [2018-04-14T23:43:43.483Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-14T23:43:45.328Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-14T23:43:55.331Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/umartigos?view=CONSUMER_VIEW  
+  
+ Sun Apr 15 2018 00:43:55 GMT+0100 (Hora de Verão de GMT)
+[debug] [2018-04-14T23:43:56.613Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2018-04-14T23:43:56.616Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/umartigos  
+  
+ Sun Apr 15 2018 00:43:56 GMT+0100 (Hora de Verão de GMT)
+[debug] [2018-04-14T23:43:57.599Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-14T23:43:57.600Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/266342599464:getServerAppConfig  
+  
+ Sun Apr 15 2018 00:43:57 GMT+0100 (Hora de Verão de GMT)
+[debug] [2018-04-14T23:43:58.426Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[info] i  functions: packaged functions (310.28 KB) for uploading
+[debug] [2018-04-14T23:44:34.623Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/umartigos/locations/us-central1/functions:generateUploadUrl  
+  
+ Sun Apr 15 2018 00:44:34 GMT+0100 (Hora de Verão de GMT)
+[debug] [2018-04-14T23:45:04.857Z] <<< HTTP RESPONSE 503
+[debug] [2018-04-14T23:45:04.857Z] <<< HTTP RESPONSE BODY {
+  "error": {
+    "code": 503,
+    "message": "The service is currently unavailable.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[debug] [2018-04-14T23:45:04.859Z] TypeError: Cannot create property 'error' on string '{
+  "error": {
+    "code": 503,
+    "message": "The service is currently unavailable.",
+    "status": "UNAVAILABLE"
+  }
+}
+'
+    at module.exports (C:\Users\Olim\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:11:16)
+    at Request._callback (C:\Users\Olim\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:47:25)
+    at Request.self.callback (C:\Users\Olim\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:186:22)
+    at emitTwo (events.js:126:13)
+    at Request.emit (events.js:214:7)
+    at Request.<anonymous> (C:\Users\Olim\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1163:10)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at IncomingMessage.<anonymous> (C:\Users\Olim\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1085:12)
+    at Object.onceWrapper (events.js:313:30)
+[error] 
+[error] Error: An unexpected error has occurred.
